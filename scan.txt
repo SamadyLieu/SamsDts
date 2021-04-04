@@ -1,0 +1,38 @@
+atma_2 = ['3061', '3066', '3071', '3072']
+atma = ['3023', '3034', '3037', '3046', '3046', '3049', '3050', '3052', '3065', '3067','3080' ,'3088', '3094', '3097', '3144', '3180', '3320','3321','3365','3366''','3384','3402','3465','3502','3506','3509','3528','3529','3531','3533','3538','3539','3550','4004','4013','7002','7780','9451','9459','9474']
+sideways = ['43','292','413','3178','3035','3054','3178','3167','3291','3414','3428','3492','3518','3532','3588','6243','6244','6247','6868']
+upsidedown = ['310','3545','4027','6055','6060','7027','7005','7026','7027','9418','430']
+center = ['30019','9440','7039','3035','6050','6052','6065','6060','310']
+atma_print = "Template: Atma\nPosition: Oress F2"
+atma2_print = 'If logo heigt is less than 5".\nTemplate:Atma\nPosition: Press F11\n\nIf its more than 5"\nTemplate: 14x14\nPosition: Align to bottom.'
+sideway_print = "Template: 14x14\nPosition: Press F2"
+upsidedown_print = "Template:14x14\nPosition: Rotate 180 Degrees or press F2 Twice\nAlight to the bottom."
+center_print = "Template:14x14\nPosition: Dead Center."
+
+
+def dts():
+ scan = input("Input item number:\n")
+ if scan in atma:
+  print(atma_print)
+ elif scan in atma_2:
+  print(atma2_print)
+ elif scan in sideways:
+  print(sideway_print)
+ elif scan in upsidedown:
+  print(upsidedown_print)
+ elif scan in center:
+  print(center_print)
+  dts()
+ else:
+  print("Template:14x14\nAlight to bottom\n\nIf it is different please contact Sam or Juan to update our list.\n\n")
+
+dts()
+ 
+runagain = input("Do you need another item.\n1.Yes\n2.No\n")
+if runagain == "1" or "Yes":
+  dts()
+else:
+  print("Closeing now.")
+  quit()
+
+
